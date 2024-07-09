@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login</title>
+
+    <!-- ::::::::::::::Favicon icon::::::::::::::-->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
+
+    <!-- ::::::::::::::All CSS Files here :::::::::::::: -->
+    <!-- Vendor CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/ionicons.css">
+    <link rel="stylesheet" href="assets/css/vendor/simple-line-icons.css">
+    <link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css"> -->
+
+    <!-- Plugin CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="assets/css/plugins/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/jquery.lineProgressbar.css">
+    <link rel="stylesheet" href="assets/css/plugins/aos.min.css"> -->
+
+    <!-- Main CSS -->
+    <!-- <link rel="stylesheet" href="assets/sass/style.css"> -->
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <script src="customerinsert.js"></script>
+<script>
+    function validateForm() {
+        var name = document.forms["registrationForm"]["name"].value;
+        var email = document.forms["registrationForm"]["email"].value;
+        var phone = document.forms["registrationForm"]["phone"].value;
+        var uid = document.forms["registrationForm"]["uid"].value;
+        var psw = document.forms["registrationForm"]["psw"].value;
+
+        if (name == "") {
+            alert("Please enter your full name.");
+            return false;
+        }
+
+        if (email == "") {
+            alert("Please enter your email address.");
+            return false;
+        }
+
+        // You can add more complex email validation here if needed
+
+        if (phone == "") {
+            alert("Please enter your phone number.");
+            return false;
+        } else if (!/^\d{10}$/.test(phone)) {
+            alert("Please enter a valid 10-digit phone number.");
+            return false;
+        }
+
+        if (uid == "") {
+            alert("Please enter a username.");
+            return false;
+        }
+
+        if (psw == "") {
+            alert("Please enter a password.");
+            return false;
+        } else if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(psw)) {
+            alert("Password must be at least 8 characters long and contain at least one digit, one lowercase letter, and one uppercase letter.");
+            return false;
+        }
+
+        // You can add more password validation rules if needed
+
+        return true;
+    }
+</script>
+
+</head>
+
+<body>
+    <!-- Start Header Area -->
+    <header class="header-section d-none d-xl-block">
+        <div class="header-wrapper">
+            <div class="header-bottom header-bottom-color--golden section-fluid sticky-header sticky-color--golden">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 d-flex align-items-center justify-content-between">
+                            <!-- Start Header Logo -->
+                            <div class="header-logo">
+                                <div class="h3">
+                                    <a href="index.html">Next Spare</a>
+                                </div>
+                            </div>
+                            <!-- End Header Logo -->
+
+                            <!-- Start Header Main Menu -->
+                            <div class="main-menu menu-color--black menu-hover-color--golden">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a  href="index.html">Home </a>
+                                            
+                                            
+                                        </li>
+
+                                        <li>
+                                            <a href="my-account.html">Profile</a>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a class="active main-menu-link" href="index.html">CATEGORIES <i
+                                                    class="fa fa-angle-down"></i></a>
+                                            <!-- Sub Menu -->
+                                            <ul class="sub-menu">
+                                                <li><a href="">Keyboard</a></li>
+                                                <li><a href="">Mouse </a></li>
+                                                <li><a href="">Monitors</a></li>
+                                                <li><a href="">Ram</a></li>
+                                                <li><a href="">VGA</a></li>
+                                                <li><a href="">Casing</a></li>
+                                                <li><a href="">Hard Disks</a></li>
+                                        </li>
+                                        </ul>
+
+                                        <li class="has-dropdown">
+                                            <a class="active main-menu-link" href="index.html">Other Pages <i
+                                                    class="fa fa-angle-down"></i></a>
+                                            <!-- Sub Menu -->
+                                            <ul class="sub-menu">
+                                                <li><a href="cart.html">Cart</a></li>
+                                                <li><a href="empty-cart.html">Empty Cart</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                <li><a href="compare.html">Compare</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="login.html">Login</a></li>
+                                                <li><a href="my-account.html">My Account</a></li>
+                                        </li>
+                                        </ul>
+
+                                        <li>
+                                            <a href="about-us.html">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact-us.html">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- End Header Main Menu Start -->
+
+                            <!-- Start Header Action Link -->
+                            <ul class="header-action-link action-color--black action-hover-color--golden">
+                                
+                                <li>
+                                    <a href="#offcanvas-add-cart" class="offcanvas-toggle">
+                                        <i class="icon-bag"></i>
+                                        <span class="item-count">3</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#search">
+                                        <i class="icon-magnifier"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#offcanvas-about" class="offacnvas offside-about offcanvas-toggle">
+                                        <i class="icon-menu"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- End Header Action Link -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Start Header Area -->
+
+   
+
+   
+
+
+        </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+    </div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+
+    <!-- Start Offcanvas Mobile Menu Section -->
+    <div id="offcanvas-about" class="offcanvas offcanvas-rightside offcanvas-mobile-about-section">
+        <!-- Start Offcanvas Header -->
+        <div class="offcanvas-header text-right">
+            <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+        </div> <!-- End Offcanvas Header -->
+        <!-- Start Offcanvas Mobile Menu Wrapper -->
+        <!-- Start Mobile contact Info -->
+        <div class="mobile-contact-info">
+            <div class="logo">
+                <a href="index.html"><img src="assets/images/logo/logo_white.png" alt=""></a>
+            </div>
+
+            <address class="address">
+                <span>Address:Kaduwela road,Malabe.</span>
+                <span>Call Us:</span>
+                <span>Email: NextSpare@example.com</span>
+            </address>
+
+            <ul class="social-link">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+
+            <ul class="user-link">
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </div>
+        <!-- End Mobile contact Info -->
+    </div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+
+    <!-- Start Offcanvas Addcart Section -->
+    <div id="offcanvas-add-cart" class="offcanvas offcanvas-rightside offcanvas-add-cart-section">
+        <!-- Start Offcanvas Header -->
+        <div class="offcanvas-header text-right">
+            <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+        </div> <!-- End Offcanvas Header -->
+
+        <!-- Start  Offcanvas Addcart Wrapper -->
+        <div class="offcanvas-add-cart-wrapper">
+            <h4 class="offcanvas-title">Shopping Cart</h4>
+            <ul class="offcanvas-cart">
+                <li class="offcanvas-cart-item-single">
+                    <div class="offcanvas-cart-item-block">
+                        <a href="#" class="offcanvas-cart-item-image-link">
+                            <img src="assets/images/product/default/home-1/default-1.jpg" alt=""
+                                class="offcanvas-cart-image">
+                        </a>
+                        <div class="offcanvas-cart-item-content">
+                            <a href="#" class="offcanvas-cart-item-link">Monitor</a>
+                            <div class="offcanvas-cart-item-details">
+                                <span class="offcanvas-cart-item-details-quantity">1 x </span>
+                                <span class="offcanvas-cart-item-details-price">$49.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offcanvas-cart-item-delete text-right">
+                        <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                    </div>
+                </li>
+                <li class="offcanvas-cart-item-single">
+                    <div class="offcanvas-cart-item-block">
+                        <a href="#" class="offcanvas-cart-item-image-link">
+                            <img src="assets/images/product/default/home-2/default-1.jpg" alt=""
+                                class="offcanvas-cart-image">
+                        </a>
+                        <div class="offcanvas-cart-item-content">
+                            <a href="#" class="offcanvas-cart-item-link">Desktop</a>
+                            <div class="offcanvas-cart-item-details">
+                                <span class="offcanvas-cart-item-details-quantity">3 x </span>
+                                <span class="offcanvas-cart-item-details-price">$500.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offcanvas-cart-item-delete text-right">
+                        <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                    </div>
+                </li>
+                <li class="offcanvas-cart-item-single">
+                    <div class="offcanvas-cart-item-block">
+                        <a href="#" class="offcanvas-cart-item-image-link">
+                            <img src="assets/images/product/default/home-3/default-1.jpg" alt=""
+                                class="offcanvas-cart-image">
+                        </a>
+                        <div class="offcanvas-cart-item-content">
+                            <a href="#" class="offcanvas-cart-item-link">Hard Disk</a>
+                            <div class="offcanvas-cart-item-details">
+                                <span class="offcanvas-cart-item-details-quantity">1 x </span>
+                                <span class="offcanvas-cart-item-details-price">$350.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offcanvas-cart-item-delete text-right">
+                        <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                    </div>
+                </li>
+            </ul>
+            <div class="offcanvas-cart-total-price">
+                <span class="offcanvas-cart-total-price-text">Subtotal:</span>
+                <span class="offcanvas-cart-total-price-value">$170.00</span>
+            </div>
+            <ul class="offcanvas-cart-action-button">
+                <li><a href="cart.html" class="btn btn-block btn-golden">View Cart</a></li>
+                <li><a href="compare.html" class=" btn btn-block btn-golden mt-5">Checkout</a></li>
+            </ul>
+        </div> <!-- End  Offcanvas Addcart Wrapper -->
+
+    </div> <!-- End  Offcanvas Addcart Section -->
+
+    
+    <!-- Start Offcanvas Search Bar Section -->
+    <div id="search" class="search-modal">
+        <button type="button" class="close">×</button>
+        <form>
+            <input type="search" placeholder="type keyword(s) here" />
+            <button type="submit" class="btn btn-lg btn-golden">Search</button>
+        </form>
+    </div>
+    <!-- End Offcanvas Search Bar Section -->
+
+    <!-- Offcanvas Overlay -->
+    <div class="offcanvas-overlay"></div>
+
+    <!-- ...:::: Start Breadcrumb Section:::... -->
+    <div class="breadcrumb-section breadcrumb-bg-color--golden">
+        <div class="breadcrumb-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="breadcrumb-title">Register</h3>
+                        <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
+                            <nav aria-label="breadcrumb">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
+                                    <li class="active" aria-current="page">Register</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- ...:::: End Breadcrumb Section:::... -->
+
+    <!-- ...:::: Start Customer Login Section :::... -->
+    <div class="customer-login">
+        <div class="container">
+            <div class="row">
+                <!--login area start-->
+                <div class="col-lg-6 col-md-6">
+                    <div class="account_form" data-aos="fade-up" data-aos-delay="0">
+                        <h3>Register</h3>
+                        <form name="registrationForm" action="CustomersServlet" method="post" onsubmit="return validateForm()">
+                            <div class="default-form-box">
+                                <label>Full Name<span>*</span></label>
+                                <input type="text" name="name">
+                            </div>
+                            <div class="default-form-box">
+                                <label>Email<span>*</span></label>
+                                <input type="email" name="email">
+                            </div>
+                            <div class="default-form-box">
+                                <label>Phone Number<span>*</span></label>
+                                <input type="text" name="phone">
+                            </div>
+                            
+                            
+                            <div class="default-form-box">
+                                <label>User Name<span>*</span></label>
+                                <input type="text" name="uid">
+                            </div>
+                            <div class="default-form-box">
+                                <label>Password <span>*</span></label>
+                                <input type="password" name="psw">
+                            </div>
+                            <div class="login_submit">
+                                <button class="btn btn-md btn-black-default-hover" type="Submit" name = "submit" value="Create Customer">Register</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                <!--login area start-->
+
+                <!--register area start-->
+                <div class="col-lg-6 col-md-6">
+                    <div class="account_form register" data-aos="fade-up" data-aos-delay="200">
+                        
+                    </div>
+                </div>
+                <!--register area end-->
+            </div>
+        </div><br>
+    </div> <!-- ...:::: End Customer Login Section :::... -->
+
+    <!-- Start Footer Section -->
+    <footer class="footer-section footer-bg">
+        <div class="footer-wrapper">
+            <!-- Start Footer Top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row mb-n6">
+                        <div class="col-lg-3 col-sm-6 mb-6">
+                            <!-- Start Footer Single Item -->
+                            <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up"
+                                data-aos-delay="0">
+                                <h5 class="title">NAVIGATION</h5>
+                                <ul class="footer-nav">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="my-account.html">Profile</a></li>
+                                    <li><a href="contact-us.html">Contact-Us</a></li>
+                                    <li><a href="about-us.html">About-US</a></li>
+                                </ul>
+                            </div>
+                            <!-- End Footer Single Item -->
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-6">
+                            
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-6">
+                            
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-6">
+                            <!-- Start Footer Single Item -->
+                            <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up"
+                                data-aos-delay="600">
+                                <h5 class="title">ABOUT US</h5>
+                                <div class="footer-about">
+                                    <p>We are Selling Quality Products </p>
+
+                                    <address class="address">
+                                        <span>Address: Kaduwela road,Malabe</span>
+                                        <span>Email: NextSpare@gmail.com</span>
+                                    </address>
+                                </div>
+                            </div>
+                            <!-- End Footer Single Item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Footer Top -->
+
+            
+
+            <!-- Start Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div
+                        class="row justify-content-between align-items-center align-items-center flex-column flex-md-row mb-n6">
+                        <div class="col-auto mb-6">
+                            <div class="footer-copyright">
+                                <p class="copyright-text">&copy;2023 <a href="index.html">Next Spare</a> All Rights Reserved <i
+                                        class="fa fa-heart text-danger"></i> by <a href=""
+                                        target="_blank">SLIIT</a> </p>
+
+                            </div>
+                        </div>
+                        <div class="col-auto mb-6">
+                            <div class="footer-payment">
+                                <div class="image">
+                                    <img src="assets/images/company-logo/payment.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Footer Bottom -->
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    
+
+    <script src="assets/js/vendor/vendor.min.js"></script>
+    <script src="assets/js/plugins/plugins.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+
+</html>

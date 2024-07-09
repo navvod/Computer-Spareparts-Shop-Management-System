@@ -1,0 +1,15 @@
+It22288912-Dmpv.Dissanayake-
+CRUD-Payment details,all the jsp,servlets and java files.
+
+
+It22171306-Janushiya.R
+CRUD-Feedback,all the jsp files,servlets and java files.
+
+It22217172-Dinusha.R
+CRUD-Book an appoinment,all the jsp files,servlets and java files.
+
+It22107732-L.N.A Priyashan
+'CRUD-User profile, login ,,all the jsp files,servlets and java files.
+
+
+All contributed to the frontend development.
